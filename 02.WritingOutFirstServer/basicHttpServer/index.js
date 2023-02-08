@@ -1,5 +1,5 @@
-const http = require('http');
-const port = 8000;
+const http = require('http');  // import http module
+const port = 8000;  // port in which you want to host
 const fs = require('fs');
 
 function requestHandler(req,res) {
@@ -21,12 +21,12 @@ function requestHandler(req,res) {
     });
 }
 
-const server = http.createServer(requestHandler);
+const server = http.createServer(requestHandler);   // Server created
 
-server.listen(port,function(err){
-    if(err){
+server.listen(port,function(err){   // server listener
+    if(err){  // if error arrises then print err and return
         console.log(err);
         return;
     }
-    console.log("Server is up and running on port",port);
+    console.log("Server is up and running on port",port);  // else print server is running
 })
