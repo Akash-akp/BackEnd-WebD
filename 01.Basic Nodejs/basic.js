@@ -2,12 +2,15 @@ console.log("Hello World");
 
 console.log(process.argv);
 
-let agrs = process.argv.slice(2);
 
 function add(a,b){
     return a+b;
 }
 
-console.log(args);
+// console.log(process.argv.slice(2));
 
-console.log("Adding 2 numbers:",add(parseInt(agrs[0]),parseInt(args[1])));
+var a = process.argv.slice(2);
+
+console.log(a);
+
+console.log("Adding 2 numbers:",add(parseInt(a[0]),parseInt(a[1])));
