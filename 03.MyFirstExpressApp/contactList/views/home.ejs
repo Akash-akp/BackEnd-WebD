@@ -1,10 +1,35 @@
 <html>
     <head>
         <title>
-            <%= title %>
+            <%= locals.title %>
         </title>
+        <link rel="stylesheet" href="https://kit.fontawesome.com/418a283835.css" crossorigin="anonymous">
+        <!-- put all css file below so that you can override -->
+        <link rel="stylesheet" href="/css/home.css">
     </head>
     <body>
-        <h1>Home file is displayed from ejs</h1>
+        <h1 id="contact-heading">
+            <i class="fas fa-address-book"></i>
+            My Contact List
+        </h1>
+        <!-- <p>Home file is displayed from ejs</p> -->
+        <ul>
+            <% for(let i of contact_list){ %>
+               <li>
+                <p><%=i.name%></p>
+                <p><%=i.phone%></p>
+               </li> 
+            <%}%>
+        </ul>
+        <div id="form">
+            <form action="/create-contact" method="POST">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="number" name="phone" placeholder="Phone" required>
+                <button type="submit">Add Contact</button>
+            </form>
+        </div>
+        <script src="https://kit.fontawesome.com/418a283835.js" crossorigin="anonymous"></script>
+        <!-- put all script file below so that you can override -->
+        <script src="/js/home.js"></script>
     </body>
 </html>
