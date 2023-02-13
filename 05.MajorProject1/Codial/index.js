@@ -1,8 +1,17 @@
 const express = require('express');
+
+// port in which you want to connect
 const port = 8000;
 
+// starting your express server
 const app = express();
+
+// connecting your routes
 app.use('/',require('./routes'));
+
+// set up view engine 
+app.set('view engine','ejs');
+app.set('views','./views');
 
 app.listen(port,function(err){
     if(err){
