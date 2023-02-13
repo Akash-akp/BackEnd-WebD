@@ -1,3 +1,5 @@
+const createController = require('../controller/create_controller');
+
 let checkbox = document.querySelectorAll('input[type="checkbox"]');
 
 for(let i=0;i<checkbox.length;i++){
