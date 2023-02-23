@@ -7,5 +7,6 @@ const taskController = require('../controller/create_controller');
 router.get('/',homeController.home);
 
 router.use('/createtsk',require('./create'));
+router.use('/deletetsk',require('./destroy'));
 
 module.exports = router;

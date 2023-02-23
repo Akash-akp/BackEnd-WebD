@@ -12,13 +12,13 @@
                 <h1>TODO App</h1>
                 <form action="/createtsk" method="POST">
                     <div id="fstlineform">
-                        <label>Description</label>
-                        <input name="des" type="text" placeholder="What do you need to do?" required>
+                        <label>Description <span style="color:red">*</span></label>
+                        <input name="des" id="des" type="text" placeholder="What do you need to do?" required>
                     </div>
                     <div id="sndlineform">
                         <div>
                             <label>Category</label>
-                            <select name="category" id="">
+                            <select name="category" id="sel">
                                 <option value="" disabled selected value>Choose a category</option>
                                 <option value="School">School</option>
                                 <option value="Work">Work</option>
@@ -26,20 +26,20 @@
                             </select>
                         </div>
                         <div>
-                            <label>Due Date</label>
-                            <input type="date" name="due" id="" >
+                            <label>Due Date <span style="color:red">*</span></label>
+                            <input type="date" name="due" id="due" required>
                         </div>
                     </div>
                     <div id="btnlineform">
                         <button type="submit"><i class="fa-solid fa-plus"></i> Add Task</button>
-                        <button type="button"><i class="fa-solid fa-trash"></i> Delete Task</button>
+                        <button type="submit" form="tasks" ><i class="fa-solid fa-trash"></i> Delete Task</button>
                     </div>
                 </form>
             </div>
-            <div id="tasks">
+            <form id="tasks" action="/deletetsk" method="POST">
                 <% for(let i of tasks) { %>
                     <div id="tsk">
-                        <input type="checkbox" name="" value="<%=i._id%>" id="">
+                        <input type="checkbox" name="key" value="<%=i._id%>" id="">
                         <div id="abouttsk">
                             <p><%=i.about%></p>
                             <p><i class="fa-solid fa-calendar-days"></i> <%=i.due%></p>
@@ -49,8 +49,11 @@
                         </div>
                     </div>
                 <% } %>
-            </div>
+                <!-- <button type="submit">sdfs</button> -->
+            </form>
         </div>
+        
+        <!-- External button-->
         <script src="https://kit.fontawesome.com/418a283835.js" crossorigin="anonymous"></script>
         <script src="/home.js"></script>
     </body>

@@ -1,14 +1,8 @@
-const createController = require('../controller/create_controller');
-
-let checkbox = document.querySelectorAll('input[type="checkbox"]');
-
-for(let i=0;i<checkbox.length;i++){
-    checkbox[i].addEventListener('change',function(){
-        if(this.checked){
-            
-        }else{
-            
-        }
-    })
-
-}
+let des = document.getElementById("des");
+let sel = document.getElementById("sel");
+let due = document.getElementById("due");
+document.addEventListener('keydown',function(e){
+    if(document.activeElement!=sel&&document.activeElement!=due){
+        des.focus();
+    }
+})

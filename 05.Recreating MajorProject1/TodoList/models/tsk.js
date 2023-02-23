@@ -12,10 +12,6 @@ const tskSchema = new mongoose.Schema({
         type: String,
         required: false
     },
-    check:{
-        type: Boolean,
-        required: false
-    }
 })
 
 const Task = mongoose.model('Task',tskSchema);
