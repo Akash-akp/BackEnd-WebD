@@ -13,6 +13,13 @@ app.use(ExpressLayout);
 app.set('view engine','ejs');
 app.set('views','./views');
 
+// connect home.ejs with css and js file
+app.use(express.static('./assets'));
+
+//extract style and script from subpage into layout
+app.set('layout extractStyles',true);
+app.set('layout extractScripts',true);
+
 // config routes
 app.use('/',require('./routes'));
 
