@@ -4,6 +4,7 @@
   "description": "second server",
   "main": "index.js",
   "scripts": {
+    "install": "npm install node && npm install ejs&&npm install express&&npm install mongoose&&npm install express-ejs-layouts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
