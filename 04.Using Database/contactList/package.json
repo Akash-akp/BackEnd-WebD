@@ -4,6 +4,7 @@
   "description": "My First Express App: A list of Contact",
   "main": "index.js",
   "scripts": {
+    "install": "npm install node&&npm install express&&npm install ejs&&npm install mongoose&&npm install express-ejs-layouts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Akash Kumar Parida",
