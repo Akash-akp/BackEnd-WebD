@@ -11,3 +11,5 @@ db = mongoose.connection;
 db.on('error',(err)=>console.log("Database error"));
 
 db.once('open',()=>{console.log("Successfully connected to database")})
+
+module.exports = db;
