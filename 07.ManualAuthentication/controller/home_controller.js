@@ -1,23 +1,17 @@
+const User = require("../models/user");
+
 module.exports.home = (req,res)=>{
-    res.render('home',{
-        title: "Home"
-    });
-}
-
-module.exports.signUp = (req,res)=>{
-    res.render('SignUp',{
-        title:"SignUp"
-    });
-}
-
-module.exports.signIn = (req,res)=>{
-    res.render('SignIn',{
-        title:"SignIn"
-    })
-}
-
-module.exports.verified = (req,res)=>{
-    res.render('verifiedUser',{
-        title:"Verified"
-    })
+    // console.log(req.cookies);
+    if(req.cookies.user_id){
+        User.findById(req.cookies.user_id)
+        .catch(err=>{return;})
+        .then(user=>{
+            return res.render('home',{
+                title: "Home",
+                user: user
+            });
+        })
+    }else{
+        return res.redirect('SignIn')
+    }
 }
