@@ -1,0 +1,129 @@
+body {
+  margin: 0px;
+}
+
+.flex{
+  display: flex;
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  position: sticky;
+  top: 0px;
+  z-index: 9;
+  width: 100%;
+  height: 62px;
+  background: #f2f2fa;
+  /* uppershade */
+
+  box-shadow: 0px 10px 26px rgba(79, 79, 79, 0.4);
+}
+
+.text-center {
+  text-align: center;
+}
+
+header img {
+  position: absolute;
+  width: 36px;
+  height: 39px;
+  left: 5%;
+  top: 13px;
+}
+
+.btn {
+  background: #1302be;
+  box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+
+  color: #ffffff;
+  width: 232px;
+  height: 63px;
+  border: none;
+}
+
+.primary {
+  background: #1302be;
+}
+
+.danger {
+  background-color: #be0202;
+}
+
+/*********TextField************/
+
+.TextField {
+  height: 74px;
+  width: 80%;
+  max-width: 400px;
+  background-color: #ededed;
+  border: none;
+  margin: 12px 0px;
+  outline: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding-left: 27px;
+}
+
+.TextField::placeholder {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+
+  color: #4e4e4e;
+}
+
+.TextField:focus {
+  background: #ffffff;
+  border: 1px solid #1302be;
+  box-shadow: 0px 0px 10px #1302be;
+  border-radius: 20px;
+}
+
+.TextFieldValid {
+  background: #ffffff;
+  border: 1px solid #04cd79;
+  box-shadow: 0px 0px 12px #63ddaa;
+  border-radius: 20px;
+}
+
+.TextFieldError {
+  background: #ffffff;
+  border: 1px solid #ff0000;
+  box-shadow: 0px 0px 12px rgba(255, 0, 0, 0.25);
+}
+
+/******textarea*********/
+
+.textArea {
+  
+  box-sizing: border-box;
+  
+  width: 100%;
+  height: 160px;
+  padding: 30px 30px;
+  background-color: #e8e8e8;
+  border: 1px solid #acacac;
+  border-radius: 31px;
+  outline: none;
+}
+
+.textArea:focus {
+  background-color: #ffffff;
+  border: 1px solid #1302be;
+  box-shadow: 0px 0px 10px rgba(19, 2, 190, 0.5);
+  border-radius: 31px;
+}
