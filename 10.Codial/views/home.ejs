@@ -1,0 +1,12 @@
+
+<%- include('_nav'); %>
+<div style="height: 100px;"></div>
+<p class="h2text text-center">Hi!! <%= user.name %></p>
+<p class="subtitle text-center">Your email is <%= user.email %></p>
+
+<div class="text-center">
+    <button type="button" class="primary btn subtitle" onclick="location.href='/'">Post Section</button> <br> <br> 
+    <button type="button" class="danger btn subtitle" onclick="location.href='/User/SignOut'">Log Out</button>
+</div>
+
+<%- include('_lowernav'); %>
